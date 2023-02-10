@@ -1,0 +1,45 @@
+<body>
+
+  <div class="card blue">
+    <nav class="navbar ">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="padding-left: 100px;">
+          Calcular
+        </a>
+      </div>
+
+    </nav>
+
+    <form>
+      <div class="form-group" class="mb-3">
+        <label for="numero1">Número 1:</label>
+        <div class="col-sm-4">
+          <input id="numero1" class="form-control" placeholder="Digite" #numero1 #numeroSub1 #numeroDiv1 #numeroMult1
+            type="text" />
+        </div>
+      </div>
+      <div class="form-group" class="mb-3">
+        <label for="numero1">Número 2:</label>
+        <div class="col-sm-4">
+          <input id="numero2" class="form-control" placeholder="Digite" #numero2 #numeroSub2 #numeroDiv2 #numeroMult2
+            type="text" />
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="somar(numero1.value, numero2.value)">somar</button>
+      <button type="button" class="btn btn-primary"
+        (click)="subtrair(numeroSub1.value, numeroSub2.value)">Subtrair</button>
+      <button type="button" class="btn btn-primary"
+        (click)="dividir(numeroDiv1.value, numeroDiv2.value)">Dividir</button>
+      <button type="button" class="btn btn-primary"
+        (click)="multiplicar(numeroMult1.value, numeroMult2.value)">Multiplicar</button>
+
+      <div class="form-group" class="mb-3">
+        <label for="resultado">Resultado:</label>
+        <div class="col-sm-3">
+          <input id="resultado" class="form-control" type="text" [value]="resultado" readonly />
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
